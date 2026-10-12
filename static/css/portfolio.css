@@ -31,6 +31,7 @@ html.dark .bulb-filament,html.dark .bulb-filament:before,html.dark .bulb-filamen
 @keyframes bulb-wire-flex{0%,100%{d:path("M17.5 0 C17.5 16 17.5 33 17.5 49")}15%{d:path("M17.5 0 C19 15 31 33 17.5 49")}32%{d:path("M17.5 0 C13 15 3 34 17.5 49")}49%{d:path("M17.5 0 C19 16 28 34 17.5 49")}66%{d:path("M17.5 0 C15 16 9 34 17.5 49")}82%{d:path("M17.5 0 C17 16 15 34 17.5 49")}}
 @media(max-width:720px){header{padding-right:48px}nav{gap:12px}.theme-toggle{width:36px;height:70px}.bulb-hanging{height:65px}.bulb-cord{width:29px;height:40px}.bulb-body{top:37px}.bulb-glass{width:23px;height:23px}.bulb-filament{top:6px}}
 .brand img{display:block;width:138px;height:58px;border-radius:8px;object-fit:contain}
+html:not(.dark) .brand img{filter:invert(1) !important;}
 .contact-location{color:var(--muted)}
 .contact-links{display:grid;gap:14px;margin-top:38px}
 .contact-link-card{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 24px;border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);text-decoration:none;backdrop-filter:blur(10px);transition:transform .2s,border-color .2s}
@@ -39,3 +40,21 @@ html.dark .bulb-filament,html.dark .bulb-filament:before,html.dark .bulb-filamen
 .contact-link-value{color:var(--violet);overflow-wrap:anywhere;text-align:right}
 @media(max-width:720px){.brand img{width:112px;height:48px}}
 @media(max-width:600px){.contact-link-card{align-items:flex-start;flex-direction:column;gap:5px;padding:17px}.contact-link-value{text-align:left}}
+
+html:not(.dark){
+  --ink:#171927;
+  --muted:#596579;
+  --line:#e3e6ef;
+  --violet:#5035c7;
+  --violet-dark:#3d289e;
+  --cream:#f7f8fc;
+  --card:rgba(255,255,255,.94);
+  --nav-link:#4b5365;
+  --grid:rgba(55,63,84,.035);
+}
+html:not(.dark) .glow-one{background:radial-gradient(circle,rgba(124,106,230,.16),transparent 67%)}
+html:not(.dark) .glow-two{background:radial-gradient(circle,rgba(238,178,107,.14),transparent 67%)}
+html:not(.dark) .glow-three{background:radial-gradient(circle,rgba(74,173,164,.075),transparent 68%)}
+html:not(.dark) .background-grid{opacity:.45}
+html:not(.dark) .hero .portrait{box-shadow:14px 14px 0 #e9eaf2,0 24px 48px rgba(26,31,50,.14)}
+html:not(.dark) .chips span{background:#eeedfa;color:#403182}

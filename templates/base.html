@@ -4,12 +4,13 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>{% block title %}{{ site_profile.name|default:'Portfolio' }}{% endblock %}</title>
         <meta name="description" content="{{ site_profile.headline|default:'Personal portfolio' }}">
+        <link rel="icon" type="image/png" href="{% static 'images/icons/favicon.png' %}">
         <script>if(localStorage.theme==='dark'||(!('theme'in localStorage)&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')</script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/output.css' %}">
     </head>
-    <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+    <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 bg-animate">
         <div class="min-h-screen flex flex-col">
             {% include 'components/navbar.html' %}
             <main class="flex-1">

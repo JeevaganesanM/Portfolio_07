@@ -1,1 +1,11 @@
-{% extends 'base.html' %}{% block title %}About | {{ site_profile.name }}{% endblock %}{% block content %}<section class="mx-auto max-w-4xl px-5 py-20"><h1 class="font-display text-4xl font-bold">About me</h1><p class="mt-6 whitespace-pre-line text-lg leading-8 text-slate-600 dark:text-slate-300">{{ site_profile.bio }}</p><h2 class="mt-16 font-display text-2xl font-bold">Skills</h2><div class="mt-5 flex flex-wrap gap-3">{% for skill in skills %}{% include 'components/skill_chip.html' %}{% endfor %}</div><h2 class="mt-16 font-display text-2xl font-bold">Experience</h2><div class="mt-6 space-y-8">{% for item in experiences %}{% include 'components/timeline_item.html' %}{% empty %}<p class="text-slate-500">Experience coming soon.</p>{% endfor %}</div><h2 class="mt-16 font-display text-2xl font-bold">Education</h2><div class="mt-6 space-y-6">{% for item in education %}<article><h3 class="font-bold">{{ item.qualification }}</h3><p class="text-slate-500">{{ item.institution }} · {{ item.start_year }}{% if item.end_year %}–{{ item.end_year }}{% endif %}</p><p class="mt-2">{{ item.description }}</p></article>{% endfor %}</div></section>{% endblock %}
+{% extends 'base.html' %}{% block title %}About | {{ site_profile.name }}{% endblock %}{% block content %}
+<section class="mx-auto max-w-4xl px-5 py-20">
+    <h1 class="font-display text-4xl font-bold">About me</h1>
+    <p class="mt-6 whitespace-pre-line text-lg leading-8 text-slate-600 dark:text-slate-300">{{ site_profile.bio }}</p>
+    <h2 class="mt-16 font-display text-2xl font-bold">Skills</h2>
+    <div class="mt-5 flex flex-wrap gap-3">{% for skill in skills %}{% include 'components/skill_chip.html' %}{% endfor %}</div>
+    <h2 class="mt-16 font-display text-2xl font-bold">Experience</h2>
+    <div class="mt-6 space-y-8">{% for item in experiences %}{% include 'components/timeline_item.html' %}{% empty %}<p class="text-slate-500">Experience coming soon.</p>{% endfor %}</div>
+    <h2 class="mt-16 font-display text-2xl font-bold">Education</h2>
+    <div class="mt-6 space-y-6">{% for item in education %}<article><h3 class="font-bold">{{ item.qualification }}</h3><p class="text-slate-500">{{ item.institution }} · {{ item.start_year }}{% if item.end_year %}–{{ item.end_year }}{% endif %}</p><p class="mt-2">{{ item.description }}</p></article>{% endfor %}</div>
+</section>{% endblock %}
