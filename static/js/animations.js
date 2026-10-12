@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-reveal]').forEach((el) => new IntersectionObserver(([entry], observer) => { if (entry.isIntersecting) { el.classList.add('is-visible'); observer.unobserve(el); } }).observe(el));

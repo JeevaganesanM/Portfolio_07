@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}{{ profile.name }}{% endblock %}</title>
+  <meta name="description" content="{{ profile.headline }}">
+  <script>if(localStorage.theme==='dark'||(!('theme'in localStorage)&&matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+</head>
+<body>
+  <div class="ambient-background" aria-hidden="true">
+    <div class="glow glow-one"></div><div class="glow glow-two"></div><div class="glow glow-three"></div><div class="background-grid"></div>
+  </div>
+  <header>
+    <a class="brand" href="{% url 'core:home' %}" aria-label="{{ profile.name }} home"><img src="{% static profile.logo %}" alt="{{ profile.name }} logo"></a>
+    <nav>
+      <a href="{% url 'core:about' %}">About</a><a href="{% url 'core:projects' %}">Projects</a><a class="nav-contact" href="{% url 'core:contact' %}">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" data-theme-toggle>
+      <span class="bulb-hanging" aria-hidden="true">
+        <svg class="bulb-cord" viewBox="0 0 35 49" preserveAspectRatio="none">
+          <path d="M17.5 0 C17.5 16 17.5 33 17.5 49"></path>
+        </svg>
+        <span class="bulb-body">
+          <span class="bulb-socket"></span>
+          <span class="bulb-glass"><span class="bulb-filament"></span></span>
+        </span>
+      </span>
+    </button>
+  </header>
+  <main>{% block content %}{% endblock %}</main>
+  <footer><span>&copy; {% now 'Y' %} {{ profile.name }}</span><span>Built with curiosity &amp; code.</span></footer>
+  <script src="{% static 'js/theme.js' %}"></script>
+</body>
+</html>

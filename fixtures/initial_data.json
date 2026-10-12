@@ -1,0 +1,9 @@
+[
+  {"model":"core.profile","pk":1,"fields":{"name":"Jeeva","headline":"Full-stack developer crafting useful web experiences.","bio":"I build clean, accessible web applications with a focus on thoughtful details and reliable engineering.","avatar":"","email":"hello@example.com","location":"India","github_url":"https://github.com/","linkedin_url":"https://www.linkedin.com/"}},
+  {"model":"core.skill","pk":1,"fields":{"name":"Python","category":"Backend","order":1}},
+  {"model":"core.skill","pk":2,"fields":{"name":"Django","category":"Backend","order":2}},
+  {"model":"core.skill","pk":3,"fields":{"name":"JavaScript","category":"Frontend","order":3}},
+  {"model":"core.skill","pk":4,"fields":{"name":"Tailwind CSS","category":"Frontend","order":4}},
+  {"model":"projects.project","pk":1,"fields":{"title":"Portfolio Platform","slug":"portfolio-platform","summary":"A fast personal portfolio with content managed through Django admin.","description":"","image":"","tech_tags":"Django, Tailwind CSS, JavaScript","live_url":"","source_url":"","featured":true,"order":1,"created_at":"2026-01-01T00:00:00Z"}},
+  {"model":"articles.article","pk":1,"fields":{"title":"Building for clarity","slug":"building-for-clarity","excerpt":"Notes on making software interfaces feel simple and focused.","body":"# Building for clarity\n\nGood products make the next step obvious.","cover":"","published_at":"2026-01-01","is_published":true}}
+]

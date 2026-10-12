@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+db.sqlite3
+static/css/output.css
+media/*
+!media/.gitkeep
+node_modules/

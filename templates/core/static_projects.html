@@ -1,0 +1,1 @@
+{% extends 'portfolio_base.html' %}{% block content %}<section class="page"><h1>Selected projects</h1><p>Applied AI and optimisation work from my engineering portfolio.</p>{% for project in projects %}<article class="education"><h2>{{ project.title }}</h2><p>{{ project.summary }}</p><p><strong>{{ project.tech }}</strong></p></article>{% endfor %}</section>{% endblock %}
